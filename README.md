@@ -33,7 +33,7 @@ NyxBank's frontend simulates a futuristic banking system where cryptocurrency, b
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/nyxbank.git
+   git clone https://github.com/ArielAmzallag/nyxbank.git
    cd nyxbank/nyxbank-frontend
    ```
 
