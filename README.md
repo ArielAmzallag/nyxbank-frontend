@@ -11,7 +11,7 @@ A dystopian banking interface built with Next.js, featuring cyberpunk aesthetics
 
 NyxBank's frontend simulates a futuristic banking system where cryptocurrency, biometric collateral, and AI assistants are commonplace. The UI features neon accents, glassmorphism, and subtle glitch effects to create an unsettling cyberpunk atmosphere.
 
-![NyxBank Screenshot](/images/nyxbank-front-screenshot.png)
+![NyxBank Screenshot](public/images/nyxbank-front-screenshot.png)
 
 ## Features
 
