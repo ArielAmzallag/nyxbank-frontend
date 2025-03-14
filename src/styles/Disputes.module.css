@@ -1,0 +1,356 @@
+.title {
+    font-size: 32px;
+    margin-bottom: var(--padding-md);
+    text-align: center;
+    margin-top: var(--padding-lg);
+  }
+  
+  .disputesContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--padding-lg);
+    margin-bottom: var(--padding-xl);
+  }
+  
+  @media (max-width: 768px) {
+    .disputesContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .disputesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .sectionTitle {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .disputesListCard, .disputeFormCard, .infoCard {
+    padding: var(--padding-lg);
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: var(--padding-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: var(--padding-sm);
+  }
+  
+  /* Dispute list styling */
+  .disputesList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .disputeItem {
+    background-color: rgba(26, 27, 38, 0.5);
+    border-radius: 8px;
+    padding: var(--padding-md);
+  }
+  
+  .disputeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .disputeId {
+    font-family: monospace;
+    font-weight: 500;
+  }
+  
+  .disputeStatus {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .statusPending {
+    background-color: rgba(255, 200, 0, 0.2);
+    color: rgb(255, 200, 0);
+  }
+  
+  .statusReviewing {
+    background-color: rgba(106, 0, 255, 0.2);
+    color: rgb(106, 0, 255);
+  }
+  
+  .statusResolved {
+    background-color: rgba(0, 255, 100, 0.2);
+    color: rgb(0, 255, 100);
+  }
+  
+  .statusRejected {
+    background-color: rgba(255, 0, 77, 0.2);
+    color: rgb(255, 0, 77);
+  }
+  
+  .disputeDetails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding-md);
+    margin-bottom: var(--padding-sm);
+    font-size: 0.9rem;
+  }
+  
+  .disputeTransaction, .disputeAmount, .disputeDate {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .detailLabel {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+  }
+  
+  .transactionLink {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .transactionLink:hover {
+    text-decoration: underline;
+  }
+  
+  .disputeReason {
+    margin-bottom: var(--padding-sm);
+    padding-top: var(--padding-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .disputeResolution {
+    background-color: rgba(0, 255, 100, 0.05);
+    border-radius: 4px;
+    padding: var(--padding-sm);
+    margin-top: var(--padding-sm);
+  }
+  
+  .resolutionDate {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 5px;
+  }
+  
+  .disputeMessage {
+    font-size: 0.9rem;
+    padding: var(--padding-sm);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin-top: var(--padding-sm);
+  }
+  
+  .noDisputes {
+    text-align: center;
+    padding: var(--padding-lg);
+  }
+  
+  .noDisputes p {
+    margin-bottom: var(--padding-md);
+    color: var(--text-secondary);
+  }
+  
+  /* Dispute form styling */
+  .disputeForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .formSection {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .transactionSelectionList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: var(--padding-sm);
+    padding-right: var(--padding-sm);
+  }
+  
+  .transactionSelectItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-sm);
+    border-radius: 4px;
+    background-color: rgba(26, 27, 38, 0.5);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .transactionSelectItem:hover {
+    background-color: rgba(26, 27, 38, 0.8);
+  }
+  
+  .selectedTransaction {
+    background-color: rgba(106, 0, 255, 0.2);
+    border: 1px solid rgba(106, 0, 255, 0.5);
+  }
+  
+  .transactionDetails {
+    flex: 1;
+  }
+  
+  .transactionHeader {
+    display: flex;
+    gap: var(--padding-md);
+    margin-bottom: 4px;
+  }
+  
+  .transactionType {
+    font-size: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .transactionParty {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  .disputeTextarea {
+    width: 100%;
+    min-height: 120px;
+    padding: var(--padding-sm);
+    background-color: rgba(26, 27, 38, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: var(--text);
+    font-family: inherit;
+    resize: vertical;
+  }
+  
+  .disputeTextarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(106, 0, 255, 0.25);
+  }
+  
+  .verificationCheck {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--padding-sm);
+  }
+  
+  .verificationLabel {
+    font-size: 0.9rem;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--padding-sm);
+    margin-top: var(--padding-sm);
+  }
+  
+  .errorBox {
+    padding: var(--padding-sm);
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: rgb(255, 80, 80);
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .successContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--padding-lg) 0;
+  }
+  
+  .successIcon {
+    font-size: 48px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 100, 0.2);
+    color: rgb(0, 255, 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .successMessage {
+    font-size: 1.1rem;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .referenceNumber {
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: var(--padding-md);
+  }
+  
+  /* Info card styling */
+  .infoSection {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .infoTitle {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .infoList {
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .infoList li {
+    margin-bottom: 8px;
+  }
+  
+  .warningSection {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: var(--padding-md);
+  }
+  
+  .warningTitle {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: var(--padding-sm);
+    color: rgb(255, 80, 80);
+  }
+  
+  /* Glitch animation */
+  @keyframes glitch {
+    0%, 100% {
+      transform: translate(0);
+    }
+    20%, 80% {
+      transform: translate(-1px, 1px);
+    }
+    40%, 60% {
+      transform: translate(1px, -1px);
+    }
+  }
+  
+  .glitch {
+    animation: glitch 0.3s infinite;
+  }
+  

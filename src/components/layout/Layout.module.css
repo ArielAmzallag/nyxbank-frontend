@@ -1,0 +1,30 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main {
+    flex: 1;
+    padding: var(--padding-lg) 0;
+  }
+  
+  .footer {
+    padding: var(--padding-md) 0;
+    background-color: rgba(0, 1, 13, 0.8);
+    border-top: 1px solid rgba(122, 0, 255, 0.1);
+  }
+  
+  .copyright {
+    font-size: 14px;
+    color: rgba(224, 224, 255, 0.7);
+    text-align: center;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .disclaimer {
+    font-size: 12px;
+    color: rgba(224, 224, 255, 0.5);
+    text-align: center;
+  }
+  

@@ -1,0 +1,338 @@
+.title {
+    font-size: 32px;
+    margin-bottom: var(--padding-md);
+    text-align: center;
+    margin-top: var(--padding-lg);
+  }
+  
+  .loanContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--padding-lg);
+    margin-bottom: var(--padding-xl);
+  }
+  
+  @media (max-width: 768px) {
+    .loanContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .loanOverview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .loanSummaryCard, .paymentCard, .paymentHistoryCard, .collateralCard {
+    padding: var(--padding-lg);
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: var(--padding-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: var(--padding-sm);
+  }
+  
+  .loanStatus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .loanId {
+    font-family: monospace;
+    font-size: 1rem;
+  }
+  
+  .statusBadge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .statusActive {
+    background-color: rgba(0, 255, 100, 0.2);
+    color: rgb(0, 255, 100);
+  }
+  
+  .statusOverdue {
+    background-color: rgba(255, 0, 77, 0.2);
+    color: rgb(255, 0, 77);
+  }
+  
+  .statusPaid {
+    background-color: rgba(0, 200, 255, 0.2);
+    color: rgb(0, 200, 255);
+  }
+  
+  .statusDefaulted {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: rgb(255, 0, 0);
+  }
+  
+  .statusCompleted {
+    background-color: rgba(0, 255, 100, 0.2);
+    color: rgb(0, 255, 100);
+  }
+  
+  .statusFailed {
+    background-color: rgba(255, 0, 77, 0.2);
+    color: rgb(255, 0, 77);
+  }
+  
+  .statusPending {
+    background-color: rgba(255, 200, 0, 0.2);
+    color: rgb(255, 200, 0);
+  }
+  
+  .balanceContainer {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .amountDue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .amountLabel {
+    font-size: 1rem;
+    color: var(--text-secondary);
+  }
+  
+  .amountValue {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 5px;
+  }
+  
+  .amountDetails {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: var(--padding-md);
+  }
+  
+  .amountRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .amountRow:last-child {
+    border-bottom: none;
+  }
+  
+  .urgentDate {
+    color: rgb(255, 0, 77);
+    font-weight: 500;
+  }
+  
+  .overdueWarning, .dueWarning, .collateralWarning {
+    padding: var(--padding-md);
+    border-radius: 4px;
+    margin: var(--padding-md) 0;
+    text-align: center;
+  }
+  
+  .overdueWarning {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: rgb(255, 80, 80);
+    font-weight: 500;
+  }
+  
+  .dueWarning {
+    background-color: rgba(255, 200, 0, 0.1);
+    border: 1px solid rgba(255, 200, 0, 0.3);
+    color: rgb(255, 200, 0);
+  }
+  
+  .collateralWarning {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    background-color: rgba(106, 0, 255, 0.1);
+    border-left: 3px solid rgba(106, 0, 255, 0.5);
+    text-align: left;
+  }
+  
+  .collateralStatus {
+    margin-top: var(--padding-md);
+  }
+  
+  .collateralHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .collateralValue {
+    font-weight: 500;
+  }
+  
+  .collateralCollected {
+    color: rgb(255, 0, 0);
+  }
+  
+  .collateralDetails {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: var(--padding-md);
+    margin-top: var(--padding-sm);
+    font-size: 0.9rem;
+  }
+  
+  .collateralType {
+    color: rgb(255, 200, 0);
+    font-weight: 500;
+  }
+  
+  .paymentCard {
+    margin-top: auto;
+  }
+  
+  .paymentForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .paymentAmount {
+    position: relative;
+  }
+  
+  .currencyTag {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: var(--text-secondary);
+    pointer-events: none;
+  }
+  
+  .paymentActions {
+    margin-top: var(--padding-sm);
+  }
+  
+  .paymentDisclaimer {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: var(--padding-sm);
+  }
+  
+  .paymentError, .paymentSuccess {
+    padding: var(--padding-sm);
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .paymentError {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: rgb(255, 80, 80);
+  }
+  
+  .paymentSuccess {
+    background-color: rgba(0, 255, 100, 0.1);
+    border: 1px solid rgba(0, 255, 100, 0.3);
+    color: rgb(0, 255, 100);
+  }
+  
+  .paymentList {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .paymentHeader {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: var(--padding-sm);
+    background-color: rgba(26, 27, 38, 0.8);
+    font-weight: 500;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .paymentItem {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: var(--padding-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
+  }
+  
+  .paymentItem:last-child {
+    border-bottom: none;
+  }
+  
+  .paymentDate, .paymentAmount, .paymentStatus {
+    padding: 0 var(--padding-sm);
+  }
+  
+  .paymentStatus {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .noPayments {
+    text-align: center;
+    padding: var(--padding-lg);
+    color: var(--text-secondary);
+  }
+  
+  .collateralCard {
+    grid-column: 1 / -1;
+    background-color: rgba(20, 0, 0, 0.5);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+  }
+  
+  .collateralContent {
+    display: flex;
+    gap: var(--padding-md);
+    margin-bottom: var(--padding-md);
+  }
+  
+  .collateralIcon {
+    font-size: 2rem;
+  }
+  
+  .collateralMessage {
+    flex: 1;
+  }
+  
+  .enforcementWarning {
+    font-weight: 500;
+    color: rgb(255, 0, 0);
+    margin-top: var(--padding-sm);
+  }
+  
+  /* Glitch animation */
+  @keyframes glitch {
+    0%, 100% {
+      transform: translate(0);
+    }
+    20%, 80% {
+      transform: translate(-1px, 1px);
+    }
+    40%, 60% {
+      transform: translate(1px, -1px);
+    }
+  }
+  
+  .glitch {
+    animation: glitch 0.3s infinite;
+  }
+  
+  

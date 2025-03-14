@@ -1,0 +1,181 @@
+.navbar {
+  background-color: rgba(0, 1, 13, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: var(--padding-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(122, 0, 255, 0.1);
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--padding-md);
+}
+
+.navLink {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--primary);
+  text-shadow: 0 0 8px var(--primary);
+}
+
+/* Active link styling */
+.activeLink {
+  color: var(--primary);
+  text-shadow: 0 0 8px var(--primary);
+}
+
+.activeLink::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+/* Divider for visual separation */
+.navDivider {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 0.5rem;
+}
+
+/* Logout button specific styling */
+.logoutButton {
+  margin-left: 0.5rem;
+}
+
+/* Mobile menu toggle button */
+.mobileMenuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menuBar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Development mode toggle button */
+.devModeToggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.devModeToggle:hover {
+  opacity: 1;
+}
+
+
+/* Mobile styles */
+@media (max-width: 992px) {
+  .mobileMenuToggle {
+    display: flex;
+  }
+  
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(0, 1, 13, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    gap: var(--padding-sm);
+  }
+  
+  .mobileMenuOpen {
+    right: 0;
+  }
+  
+  .navLink {
+    padding: 0.75rem 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .navDivider {
+    width: 100%;
+    height: 1px;
+    margin: 0.5rem 0;
+  }
+  
+  .logoutButton {
+    margin: 1rem 0 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    gap: var(--padding-sm);
+  }
+  
+  .navLink {
+    font-size: 14px;
+  }
+  
+  /* Animation for menu toggle */
+  .mobileMenuOpen .menuBar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .mobileMenuOpen .menuBar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobileMenuOpen .menuBar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}

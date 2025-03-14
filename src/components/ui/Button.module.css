@@ -1,0 +1,93 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Button variants */
+.default {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+
+.default:hover {
+  box-shadow: 0 0 8px var(--primary), 0 0 16px rgba(122, 0, 255, 0.5);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--primary);
+  border: none;
+}
+
+.ghost:hover {
+  background-color: rgba(122, 0, 255, 0.1);
+  text-shadow: 0 0 8px var(--primary);
+}
+
+.destructive {
+  background-color: var(--error);
+  color: white;
+  border: none;
+}
+
+.destructive:hover {
+  box-shadow: 0 0 8px var(--error), 0 0 16px rgba(255, 32, 64, 0.5);
+}
+
+.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.outline:hover {
+  background-color: rgba(122, 0, 255, 0.1);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+/* Button sizes */
+.small {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.medium {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.large {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 18px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

@@ -1,0 +1,678 @@
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .securityBadge {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: rgb(255, 80, 80);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: monospace;
+  }
+  
+  .warningBanner {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+  
+  .warningContent {
+    padding: 0.75rem;
+    text-align: center;
+    color: rgb(255, 100, 100);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .pageContainer {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .transactionsPanel {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .detailsPanel {
+    flex: 1;
+  }
+  
+  /* Filters Card */
+  .filtersCard {
+    padding: 0.75rem;
+  }
+  
+  .filtersContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .filtersTabs {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .filterTab {
+    background: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+  }
+  
+  .filterTab:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .activeFilter {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgb(106, 0, 255);
+  }
+  
+  /* Transactions Card */
+  .transactionsCard {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .transactionsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionTitle {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .recordCount {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .transactionsList {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: 0.5rem;
+  }
+  
+  .noRecords {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .transactionItem {
+    background-color: rgba(30, 30, 40, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .transactionItem:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(40, 40, 50, 0.5);
+  }
+  
+  .selectedTransaction {
+    border-color: rgba(106, 0, 255, 0.5);
+    background-color: rgba(106, 0, 255, 0.1);
+  }
+  
+  .transactionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .transactionId {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .redactionLevel {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  
+  .levelOne {
+    background-color: rgba(255, 200, 0, 0.2);
+    color: rgb(255, 200, 0);
+  }
+  
+  .levelTwo {
+    background-color: rgba(255, 150, 0, 0.2);
+    color: rgb(255, 150, 0);
+  }
+  
+  .levelThree {
+    background-color: rgba(255, 80, 0, 0.2);
+    color: rgb(255, 80, 0);
+  }
+  
+  .levelFour {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: rgb(255, 0, 0);
+  }
+  
+  .transactionDetails {
+    margin-bottom: 0.5rem;
+  }
+  
+  .transactionType {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .transactionParties {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .partyLabel {
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 0.25rem;
+  }
+  
+  .username {
+    font-weight: 500;
+  }
+  
+  .erasedUser {
+    color: rgb(180, 130, 255);
+    text-decoration: line-through;
+  }
+  
+  .transactionAmount {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .transactionFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .transactionFlags {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .securityFlag {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+  }
+  
+  .moreFlags {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+  
+  /* Details Card */
+  .detailsCard {
+    padding: 1.25rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .detailsHeader {
+    margin-bottom: 1.5rem;
+  }
+  
+  .detailsTitle {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .detailsTabs {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .detailTab {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .detailTab:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .activeTab {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgb(106, 0, 255);
+  }
+  
+  .detailsContent {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .detailSection {
+    margin-bottom: 2rem;
+  }
+  
+  .detailSectionTitle {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .detailGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .detailItem {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .detailLabel {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.25rem;
+  }
+  
+  .detailValue {
+    font-size: 0.95rem;
+  }
+  
+  .reasonBox {
+    background-color: rgba(30, 30, 40, 0.5);
+    padding: 0.75rem;
+    border-radius: 6px;
+  }
+  
+  .reasonLabel {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.5rem;
+  }
+  
+  .reasonValue {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .partiesDetails {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .partyDetail {
+    flex: 1;
+    background-color: rgba(30, 30, 40, 0.5);
+    padding: 0.75rem;
+    border-radius: 6px;
+  }
+  
+  .partySeparator {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .partyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .partyRole {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .erasedBadge {
+    font-size: 0.7rem;
+    background-color: rgba(180, 0, 255, 0.2);
+    color: rgb(180, 130, 255);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+  }
+  
+  .partyId {
+    font-size: 0.8rem;
+    font-family: monospace;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.25rem;
+  }
+  
+  .partyName {
+    font-weight: 500;
+  }
+  
+  .flagsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .flagItem {
+    background-color: rgba(30, 30, 40, 0.5);
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+  
+  /* Access Log Tab */
+  .accessLogContent {
+    padding: 0.5rem 0;
+  }
+  
+  .accessLogTitle {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .accessLogList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .accessLogItem {
+    background-color: rgba(30, 30, 40, 0.5);
+    padding: 0.75rem;
+    border-radius: 6px;
+  }
+  
+  .accessLogHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+  }
+  
+  .accessAction {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .accessTime {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .accessUser {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .accessWarning {
+    font-size: 0.85rem;
+    color: rgba(255, 100, 100, 0.8);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 0, 0, 0.2);
+  }
+  
+  /* Recovery Tab */
+  .notRecoverable {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .notRecoverableIcon {
+    font-size: 3rem;
+    color: rgb(255, 80, 80);
+    margin-bottom: 1rem;
+  }
+  
+  .notRecoverableTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 100, 100);
+  }
+  
+  .notRecoverableText {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .recoveryOptions {
+    padding: 1rem 0;
+  }
+  
+  .recoveryTitle {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .recoveryText {
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .recoveryActions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .unredactWarning {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .warningTitle {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: rgb(255, 100, 100);
+  }
+  
+  .warningText {
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .authSection {
+    margin-bottom: 1.5rem;
+  }
+  
+  .authLabel {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .accessError {
+    color: rgb(255, 80, 80);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .warningActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  
+  .noSelectionCard {
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .noSelectionContent {
+    max-width: 400px;
+  }
+  
+  .noSelectionIcon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+  }
+  
+  .noSelectionTitle {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .noSelectionText {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Glitch effects */
+  .glitchTarget {
+    position: relative;
+  }
+  
+  .activeGlitch {
+    animation: glitch 0.2s infinite;
+  }
+  
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  /* Scrollbar styles */
+  .transactionsList::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .transactionsList::-webkit-scrollbar-track {
+    background: rgba(30, 30, 40, 0.3);
+    border-radius: 4px;
+  }
+  
+  .transactionsList::-webkit-scrollbar-thumb {
+    background: rgba(106, 0, 255, 0.3);
+    border-radius: 4px;
+  }
+  
+  .transactionsList::-webkit-scrollbar-thumb:hover {
+    background: rgba(106, 0, 255, 0.5);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .pageContainer {
+      flex-direction: column;
+    }
+    
+    .transactionsPanel {
+      width: 100%;
+    }
+    
+    .detailsPanel {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .detailGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .partiesDetails {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .partySeparator {
+      transform: rotate(90deg);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pageHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    
+    .transactionsHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .warningActions {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  

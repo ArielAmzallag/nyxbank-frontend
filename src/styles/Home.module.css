@@ -1,0 +1,169 @@
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 1, 13, 0.7), rgba(18, 16, 32, 0.9)),
+                url('/images/cyberpunk-city.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 1, 13, 0.8) 70%);
+    z-index: 1;
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .heroTitle {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--padding-md);
+    letter-spacing: 2px;
+  }
+  
+  .heroSubtitle {
+    font-size: 20px;
+    margin-bottom: var(--padding-lg);
+    color: var(--text);
+    opacity: 0.9;
+  }
+  
+  .heroButtons {
+    display: flex;
+    gap: var(--padding-md);
+    justify-content: center;
+  }
+  
+  .sectionTitle {
+    font-size: 32px;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: var(--padding-lg);
+  }
+  
+  .featuresSection {
+    padding: var(--padding-lg) 0;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--padding-md);
+  }
+  
+  .featureCard {
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .featureCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .featureIcon {
+    font-size: 36px;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .featureTitle {
+    font-size: 20px;
+    color: var(--text);
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .featureDescription {
+    color: rgba(224, 224, 255, 0.7);
+  }
+  
+  .glitchSection {
+    padding: var(--padding-lg) 0;
+  }
+  
+  .glitchCard {
+    padding: var(--padding-lg);
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .glitchTitle {
+    font-size: 20px;
+    color: var(--error);
+    margin-bottom: var(--padding-md);
+    letter-spacing: 2px;
+  }
+  
+  .glitchText {
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .glitchHidden {
+    display: none;
+    color: var(--error);
+    font-family: monospace;
+  }
+  
+  .glitchCard:hover .glitchHidden {
+    display: block;
+    animation: glitch 0.3s linear infinite;
+  }
+  
+  .ctaSection {
+    padding: var(--padding-lg) 0;
+  }
+  
+  .ctaCard {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--padding-lg);
+  }
+  
+  .ctaTitle {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: var(--padding-md);
+  }
+  
+  .ctaText {
+    margin-bottom: var(--padding-lg);
+    font-size: 18px;
+  }
+  
+  .ctaDisclaimer {
+    margin-top: var(--padding-md);
+    font-size: 12px;
+    color: rgba(224, 224, 255, 0.5);
+  }
+  
+  @media (max-width: 768px) {
+    .heroTitle {
+      font-size: 36px;
+    }
+    
+    .heroSubtitle {
+      font-size: 16px;
+    }
+    
+    .heroButtons {
+      flex-direction: column;
+    }
+  }
+  

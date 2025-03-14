@@ -1,0 +1,94 @@
+:root {
+    /* Dark Mode Colors (Default) */
+    --background: #00010D; /* Deep Cyber Black */
+    --primary: #7A00FF; /* Vibrant UV Glow */
+    --accent: #121020; /* Midnight Shadow */
+    --text: #E0E0FF; /* Bright Digital White */
+    --error: #FF2040; /* Cyberpunk Red */
+    
+    /* Light Mode Colors (toggled via JS) */
+    --background-light: #F2F2F5; /* Corporate Gray */
+    --primary-light: #6A00FF; /* Neon Purple */
+    --accent-light: #1B1B2F; /* Dark Steel */
+    --text-light: #1A1A1A; /* Deep Gray */
+    --error-light: #FF004D; /* Bright Red */
+    
+    /* Common sizes */
+    --border-radius: 8px;
+    --padding-sm: 8px;
+    --padding-md: 16px;
+    --padding-lg: 24px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+  }
+  
+  /* Glassmorphism effect */
+  .glass {
+    background: rgba(18, 16, 32, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(122, 0, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  /* Neon glow effects */
+  .neon-text {
+    text-shadow: 0 0 5px rgba(122, 0, 255, 0.5),
+                 0 0 10px rgba(122, 0, 255, 0.3),
+                 0 0 15px rgba(122, 0, 255, 0.2);
+  }
+  
+  .neon-border {
+    box-shadow: 0 0 5px rgba(122, 0, 255, 0.5),
+                0 0 10px rgba(122, 0, 255, 0.3);
+  }
+  
+  /* Glitch animation (subtle) */
+  @keyframes glitch {
+    0% { transform: translate(0) }
+    20% { transform: translate(-2px, 2px) }
+    40% { transform: translate(-2px, -2px) }
+    60% { transform: translate(2px, 2px) }
+    80% { transform: translate(2px, -2px) }
+    100% { transform: translate(0) }
+  }
+  
+  .glitch {
+    animation: glitch 2s steps(2) infinite;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(2);
+    animation-play-state: paused;
+  }
+  
+  .glitch:hover {
+    animation-play-state: running;
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--padding-md);
+  }
+  
+  /* Grid layouts */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--padding-md);
+  }
+  

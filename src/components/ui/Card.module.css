@@ -1,0 +1,31 @@
+.card {
+    border-radius: var(--border-radius);
+    padding: var(--padding-md);
+    margin-bottom: var(--padding-md);
+    transition: all 0.3s ease;
+  }
+  
+  .default {
+    background: rgba(18, 16, 32, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(122, 0, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  .default:hover {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(122, 0, 255, 0.2);
+  }
+  
+  .elevated {
+    background: rgba(27, 27, 47, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(122, 0, 255, 0.15);
+    box-shadow: 0 12px 45px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  .elevated:hover {
+    box-shadow: 0 12px 45px 0 rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(122, 0, 255, 0.3);
+    transform: translateY(-2px);
+  }

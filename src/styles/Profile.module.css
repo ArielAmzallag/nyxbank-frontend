@@ -1,0 +1,414 @@
+.title {
+    font-size: 32px;
+    margin-bottom: var(--padding-md);
+    text-align: center;
+    margin-top: var(--padding-lg);
+  }
+  
+  .profileContainer {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--padding-lg);
+    margin-bottom: var(--padding-xl);
+  }
+  
+  @media (max-width: 768px) {
+    .profileContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .profileSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .profileCard {
+    padding: var(--padding-md);
+  }
+  
+  .profileAvatar {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-md);
+    margin-bottom: var(--padding-md);
+  }
+  
+  .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(106, 0, 255, 0.8), rgba(0, 132, 255, 0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 15px rgba(106, 0, 255, 0.5);
+  }
+  
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .username {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .userDetails {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 5px 0 0 0;
+  }
+  
+  .userStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: var(--padding-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--padding-md);
+  }
+  
+  .statusItem {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  
+  .statusLabel {
+    color: var(--text-secondary);
+  }
+  
+  .statusValue {
+    font-weight: 500;
+  }
+  
+  .biometricStatus {
+    color: rgb(0, 255, 100);
+    display: flex;
+    align-items: center;
+    gap: var(--padding-md);
+    padding: var(--padding-md);
+    background-color: rgba(26, 27, 38, 0.6);
+    border-radius: 8px;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .collateralStatus {
+    color: var(--text);
+  }
+  
+  .logoutAction {
+    margin-top: var(--padding-md);
+  }
+  
+  .navigationLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .navLink {
+    background: none;
+    border: none;
+    padding: var(--padding-sm) var(--padding-md);
+    text-align: left;
+    font-size: 1rem;
+    color: var(--text);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .navLink:hover {
+    background-color: rgba(106, 0, 255, 0.1);
+  }
+  
+  .navLink.active {
+    background-color: rgba(106, 0, 255, 0.2);
+    color: rgb(106, 0, 255);
+    border-left: 3px solid rgb(106, 0, 255);
+  }
+  
+  .profileContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .contentCard {
+    padding: var(--padding-lg);
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: var(--padding-md);
+    color: var(--text);
+  }
+  
+  .profileDetails {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .detailLabel {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  .detailValue {
+    font-size: 1.1rem;
+  }
+  
+  .profileForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .formActions {
+    display: flex;
+    gap: var(--padding-sm);
+    justify-content: flex-end;
+    margin-top: var(--padding-sm);
+  }
+  
+  .securitySection {
+    margin-bottom: var(--padding-lg);
+    padding-bottom: var(--padding-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .securitySection:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem;
+    margin-bottom: var(--padding-md);
+    color: var(--text);
+  }
+  
+  .twoFactorStatus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-md);
+    background-color: rgba(26, 27, 38, 0.6);
+    border-radius: 8px;
+  }
+  
+  .statusInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .securityNote {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  .securityLogs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-sm);
+  }
+  
+  .logItem {
+    padding: var(--padding-sm);
+    background-color: rgba(26, 27, 38, 0.6);
+    border-radius: 8px;
+  }
+  
+  .logItemHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .logAction {
+    font-weight: 500;
+  }
+  
+  .logStatus {
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .statusSuccess {
+    background-color: rgba(0, 255, 100, 0.2);
+    color: rgb(0, 255, 100);
+  }
+  
+  .statusFailed {
+    background-color: rgba(255, 0, 77, 0.2);
+    color: rgb(255, 0, 77);
+  }
+  
+  .logItemDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 0.9rem;
+  }
+  
+  .logDetail {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .logDetailLabel {
+    color: var(--text-secondary);
+    min-width: 70px;
+  }
+  
+  .checkboxGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .checkboxGroup input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .preferencesNote {
+    margin-top: var(--padding-md);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  .disclaimer {
+    font-style: italic;
+  }
+  
+  .successMessage {
+    background-color: rgba(0, 255, 100, 0.1);
+    border: 1px solid rgba(0, 255, 100, 0.3);
+    color: rgb(0, 255, 100);
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .errorMessage {
+    background-color: rgba(255, 0, 77, 0.1);
+    border: 1px solid rgba(255, 0, 77, 0.3);
+    color: rgb(255, 0, 77);
+    padding: var(--padding-sm);
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .biometricIcon {
+    font-size: 2rem;
+  }
+  
+  .biometricInfo {
+    flex: 1;
+  }
+  
+  .biometricTitle {
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+  }
+  
+  .emphasize {
+    color: rgb(0, 255, 100);
+    font-weight: 500;
+  }
+  
+  .biometricItem {
+    padding: var(--padding-sm);
+    background-color: rgba(26, 27, 38, 0.4);
+    border-radius: 8px;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .biometricHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .biometricType {
+    font-weight: 500;
+  }
+  
+  .biometricVerified {
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: rgba(0, 255, 100, 0.2);
+    color: rgb(0, 255, 100);
+  }
+  
+  .biometricDescription {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  
+  .biometricWarning {
+    padding: var(--padding-md);
+    background-color: rgba(255, 0, 77, 0.1);
+    border: 1px solid rgba(255, 0, 77, 0.3);
+    border-radius: 8px;
+    margin: var(--padding-md) 0;
+    font-size: 0.9rem;
+    color: rgb(255, 80, 80);
+  }
+  
+  .biometricActions {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--padding-md);
+  }
+  
+  /* Glitch animation for error messages */
+  @keyframes glitch {
+    0%, 100% {
+      transform: translate(0);
+    }
+    20%, 80% {
+      transform: translate(-1px, 1px);
+    }
+    40%, 60% {
+      transform: translate(1px, -1px);
+    }
+  }
+  
+  .glitch {
+    animation: glitch 0.3s infinite;
+  }
+  

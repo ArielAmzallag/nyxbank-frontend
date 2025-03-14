@@ -1,0 +1,291 @@
+.title {
+    font-size: 32px;
+    margin-bottom: var(--padding-md);
+    text-align: center;
+    margin-top: var(--padding-lg);
+  }
+  
+  .statsCard {
+    margin-bottom: var(--padding-lg);
+  }
+  
+  .summaryCard {
+    padding: var(--padding-lg);
+  }
+  
+  .summaryStats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .statItem {
+    text-align: center;
+  }
+  
+  .statValue {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .statLabel {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  .corruptionWarning {
+    text-align: center;
+    padding: var(--padding-md);
+    background-color: rgba(106, 0, 255, 0.1);
+    border: 1px solid rgba(106, 0, 255, 0.3);
+    color: rgb(180, 100, 255);
+    border-radius: 4px;
+    margin-top: var(--padding-md);
+    font-weight: 500;
+  }
+  
+  .logsContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-lg);
+    margin-bottom: var(--padding-xl);
+  }
+  
+  .filterControls {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .filterButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--padding-sm);
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .toggleFilter {
+    margin-top: var(--padding-sm);
+  }
+  
+  .toggleLabel {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-sm);
+    cursor: pointer;
+  }
+  
+  .toggleLabel input {
+    margin: 0;
+  }
+  
+  .logsContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--padding-lg);
+  }
+  
+  @media (max-width: 768px) {
+    .logsContainer {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .logsCard, .infoCard {
+    padding: var(--padding-lg);
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: var(--padding-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: var(--padding-sm);
+  }
+  
+  /* Interactions list styling */
+  .interactionsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .interactionItem {
+    background-color: rgba(26, 27, 38, 0.5);
+    border-radius: 8px;
+    padding: var(--padding-md);
+  }
+  
+  .interactionHeader {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--padding-sm);
+    margin-bottom: var(--padding-sm);
+    padding-bottom: var(--padding-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .interactionTime {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    flex: 1;
+  }
+  
+  .interactionCategory {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  
+  .neuralScanBadge {
+    background-color: rgba(106, 0, 255, 0.2);
+    color: rgb(180, 100, 255);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .messageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-sm);
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .userMessage, .aiMessage {
+    padding: var(--padding-sm);
+    border-radius: 8px;
+  }
+  
+  .userMessage {
+    background-color: rgba(255, 255, 255, 0.05);
+    align-self: flex-end;
+    max-width: 80%;
+  }
+  
+  .aiMessage {
+    background-color: rgba(106, 0, 255, 0.1);
+    align-self: flex-start;
+    max-width: 80%;
+  }
+  
+  .corruptedMessage {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+  }
+  
+  .messageHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-sm);
+    margin-bottom: 4px;
+  }
+  
+  .messageSender {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .corruptedBadge {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: rgb(255, 80, 80);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  
+  .messageContent {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .glitchText {
+    color: rgb(255, 80, 80);
+    font-family: monospace;
+  }
+  
+  .interactionFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--padding-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .continueLink {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .continueLink:hover {
+    text-decoration: underline;
+  }
+  
+  .reportButton {
+    background: none;
+    border: none;
+    color: rgb(255, 80, 80);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0;
+    text-decoration: underline;
+  }
+  
+  .reportButton:hover {
+    color: rgb(255, 50, 50);
+  }
+  
+  .noInteractions {
+    text-align: center;
+    padding: var(--padding-lg);
+    color: var(--text-secondary);
+  }
+  
+  /* Info card styling */
+  .infoSection {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .infoTitle {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .infoSmall {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  
+  .memoryWarning {
+    margin-top: var(--padding-md);
+    padding: var(--padding-md);
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: rgb(255, 80, 80);
+  }
+  
+  /* Glitch animation */
+  @keyframes glitch {
+    0%, 100% {
+      transform: translate(0);
+    }
+    20%, 80% {
+      transform: translate(-1px, 1px);
+    }
+    40%, 60% {
+      transform: translate(1px, -1px);
+    }
+  }
+  
+  .glitch {
+    animation: glitch 0.3s infinite;
+  }
+  
+  

@@ -1,0 +1,182 @@
+.title {
+    font-size: 32px;
+    margin-bottom: var(--padding-md);
+    text-align: center;
+    margin-top: var(--padding-lg);
+  }
+  
+  .filters {
+    display: flex;
+    gap: var(--padding-sm);
+    margin-bottom: var(--padding-md);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .transactionsCard {
+    margin-bottom: var(--padding-lg);
+  }
+  
+  .transactionsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-sm);
+  }
+  
+  .transactionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+  }
+  
+  .transactionItem:hover {
+    background-color: rgba(106, 0, 255, 0.1);
+  }
+  
+  .redactedItem {
+    background-color: rgba(255, 0, 77, 0.05);
+    position: relative;
+  }
+  
+  .redactedItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(255, 0, 77, 0.1),
+      rgba(255, 0, 77, 0.1) 10px,
+      rgba(0, 0, 0, 0) 10px,
+      rgba(0, 0, 0, 0) 20px
+    );
+  }
+  
+  .transactionDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .transactionHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-sm);
+  }
+  
+  .transactionType {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .transactionStatus {
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .statusCompleted {
+    background-color: rgba(0, 255, 100, 0.2);
+    color: rgb(0, 255, 100);
+  }
+  
+  .statusFailed {
+    background-color: rgba(255, 100, 0, 0.2);
+    color: rgb(255, 150, 50);
+  }
+  
+  .statusRedacted {
+    background-color: rgba(255, 0, 77, 0.2);
+    color: rgb(255, 0, 77);
+  }
+  
+  .transactionInfo {
+    display: flex;
+    gap: var(--padding-md);
+    color: rgba(224, 224, 255, 0.7);
+    font-size: 0.9rem;
+  }
+  
+  .transactionAmount {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .redactedAmount {
+    filter: blur(4px);
+  }
+  
+  .redactedAmount:hover {
+    filter: blur(0);
+  }
+  
+  .noTransactions {
+    padding: var(--padding-lg);
+    text-align: center;
+    color: rgba(224, 224, 255, 0.5);
+  }
+  
+  .transactionActions {
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-md);
+    margin-top: var(--padding-md);
+  }
+  
+  .warningMessage {
+    margin-top: var(--padding-md);
+    padding: var(--padding-sm);
+    background-color: rgba(255, 0, 77, 0.1);
+    border: 1px solid rgba(255, 0, 77, 0.3);
+    border-radius: 4px;
+    color: rgb(255, 100, 100);
+    font-size: 0.9rem;
+    text-align: center;
+    animation: glitch 2s infinite;
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                  -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                  0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    14% {
+      text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                  -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                  0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    15% {
+      text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                  0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                  -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    49% {
+      text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                  0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                  -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    50% {
+      text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                  0.05em 0 0 rgba(0, 255, 0, 0.75),
+                  0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    99% {
+      text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                  0.05em 0 0 rgba(0, 255, 0, 0.75),
+                  0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    100% {
+      text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+                  -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+                  -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+  }
+  

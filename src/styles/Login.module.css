@@ -1,0 +1,131 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+  }
+  
+  .loginCard {
+    width: 100%;
+    max-width: 480px;
+  }
+  
+  .title {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: var(--padding-sm);
+    text-align: center;
+  }
+  
+  .subtitle {
+    color: var(--text);
+    margin-bottom: var(--padding-lg);
+    text-align: center;
+    opacity: 0.8;
+  }
+  
+  .form {
+    margin-bottom: var(--padding-lg);
+  }
+  
+  .errorBox {
+    background-color: rgba(255, 32, 64, 0.15);
+    border: 1px solid var(--error);
+    color: var(--error);
+    padding: var(--padding-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--padding-md);
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .forgotPassword {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .forgotLink {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .forgotLink:hover {
+    text-shadow: 0 0 8px var(--primary);
+  }
+  
+  .loginButton {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .register {
+    text-align: center;
+    margin-bottom: var(--padding-md);
+    font-size: 14px;
+  }
+  
+  .registerLink {
+    color: var(--primary);
+    text-decoration: none;
+    margin-left: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .registerLink:hover {
+    text-shadow: 0 0 8px var(--primary);
+  }
+  
+  .disclaimer {
+    border-top: 1px solid rgba(122, 0, 255, 0.1);
+    padding-top: var(--padding-md);
+    font-size: 12px;
+    color: rgba(224, 224, 255, 0.5);
+    text-align: center;
+  }
+  
+  .verificationMessage {
+    background-color: rgba(106, 0, 255, 0.1);
+    border: 1px solid rgba(106, 0, 255, 0.3);
+    padding: var(--padding-sm);
+    border-radius: 4px;
+    margin-bottom: var(--padding-md);
+    text-align: center;
+  }
+  
+  .successContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--padding-md);
+  }
+  
+  .successIcon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 255, 100, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: rgb(0, 255, 100);
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .successMessage {
+    color: var(--text);
+    margin-bottom: var(--padding-md);
+  }
+  
+  .hiddenText {
+    opacity: 0.3;
+    font-size: 0.8rem;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hiddenText:hover {
+    opacity: 1;
+  }

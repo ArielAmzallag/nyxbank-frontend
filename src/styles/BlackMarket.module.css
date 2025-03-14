@@ -1,0 +1,663 @@
+.blackMarketContainer {
+    min-height: 100vh;
+    padding-bottom: var(--padding-xl);
+  }
+  
+  /* Access verification screen */
+  .accessCard {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: var(--padding-lg);
+  }
+  
+  .accessLogo {
+    text-align: center;
+    margin-bottom: var(--padding-lg);
+  }
+  
+  .accessIcon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .accessTitle {
+    font-size: 2rem;
+    margin: 0;
+    color: rgb(255, 60, 60);
+    font-family: monospace;
+    letter-spacing: 2px;
+  }
+  
+  .accessWarning {
+    text-align: center;
+    margin-bottom: var(--padding-lg);
+    padding: var(--padding-md);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  
+  .disclaimer {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: var(--padding-md);
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .accessForm {
+    margin-bottom: var(--padding-lg);
+  }
+  
+  .accessError {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: rgb(255, 80, 80);
+    border-radius: 4px;
+    padding: var(--padding-sm);
+    margin: var(--padding-sm) 0;
+    font-family: monospace;
+  }
+  
+  .accessFooter {
+    font-size: 0.8rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Market header */
+  .marketHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: var(--padding-lg) 0;
+  }
+  
+  .marketTitle {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .securityBadge {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 255, 0, 0.1);
+    color: rgb(100, 255, 100);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .securityDot {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(100, 255, 100);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+  
+  /* Market filters */
+  .marketFilters {
+    margin-bottom: var(--padding-lg);
+  }
+  
+  .searchBar {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .categoryTabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .categoryTab {
+    background-color: rgba(26, 27, 38, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .categoryTab:hover {
+    background-color: rgba(26, 27, 38, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .activeTab {
+    background-color: rgba(106, 0, 255, 0.2);
+    border-color: rgba(106, 0, 255, 0.4);
+    color: rgb(180, 120, 255);
+  }
+  
+  /* Listings grid */
+  .listingsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--padding-md);
+  }
+  
+  .listingCard {
+    padding: var(--padding-md);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .listingCard:hover {
+    transform: translateY(-3px);
+  }
+  
+  .listingHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .categoryBadge {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  
+  .categoryIcon {
+    margin-right: 4px;
+  }
+  
+  .riskBadge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  
+  .riskLow {
+    background-color: rgba(0, 255, 100, 0.2);
+    color: rgb(0, 255, 100);
+  }
+  
+  .riskMedium {
+    background-color: rgba(255, 200, 0, 0.2);
+    color: rgb(255, 200, 0);
+  }
+  
+  .riskHigh {
+    background-color: rgba(255, 100, 0, 0.2);
+    color: rgb(255, 100, 0);
+  }
+  
+  .riskExtreme {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: rgb(255, 0, 0);
+  }
+  
+  .listingTitle {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .listingDescription {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--padding-md);
+    line-height: 1.4;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  
+  .listingFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .sellerInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sellerName {
+    font-size: 0.85rem;
+  }
+  
+  .sellerRating {
+    font-size: 0.85rem;
+  }
+  
+  .starFilled {
+    color: rgb(255, 200, 0);
+  }
+  
+  .starEmpty {
+    color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .priceTag {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .priceAmount {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .priceCurrency {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  
+  .listingTimer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .timerIcon {
+    margin-right: 4px;
+  }
+  
+  .noListings {
+    text-align: center;
+    padding: var(--padding-xl);
+    color: var(--text-secondary);
+  }
+  
+  /* Market disclaimer */
+  .marketDisclaimer {
+    margin-top: var(--padding-lg);
+    padding: var(--padding-md);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+  }
+  
+  .disclaimerContent {
+    text-align: center;
+    color: rgb(255, 80, 80);
+  }
+  
+  .disclaimerSmall {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+  
+  /* Purchase Modal */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: var(--padding-md);
+  }
+  
+  .purchaseModal {
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: var(--padding-lg);
+  }
+  
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--padding-md);
+    padding-bottom: var(--padding-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .modalTitle {
+    margin: 0;
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+  
+  .purchaseContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  /* Item Preview */
+  .itemPreview {
+    padding: var(--padding-md);
+    background-color: rgba(26, 27, 38, 0.5);
+    border-radius: 8px;
+  }
+  
+  .itemCategory {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--padding-sm);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  .categoryIconLarge {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+  
+  .itemTitle {
+    margin-top: 0;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .itemDesc {
+    font-size: 0.9rem;
+    margin-bottom: var(--padding-md);
+    line-height: 1.4;
+  }
+  
+  .itemDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .detailItem {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  
+  .detailLabel {
+    color: var(--text-secondary);
+  }
+  
+  /* Risk Warning */
+  .riskWarning {
+    display: flex;
+    gap: var(--padding-sm);
+    padding: var(--padding-md);
+    background-color: rgba(255, 60, 0, 0.1);
+    border: 1px solid rgba(255, 60, 0, 0.3);
+    border-radius: 8px;
+  }
+  
+  .warningIcon {
+    font-size: 1.5rem;
+  }
+  
+  .warningText {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .warningHighlight {
+    color: rgb(255, 100, 0);
+    font-weight: 500;
+  }
+  
+  /* Confirmation */
+  .confirmationDetails {
+    padding: var(--padding-md);
+    background-color: rgba(26, 27, 38, 0.5);
+    border-radius: 8px;
+  }
+  
+  .confirmationTitle {
+    margin-top: 0;
+    margin-bottom: var(--padding-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: var(--padding-sm);
+  }
+  
+  .confirmationItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+  }
+  
+  .confirmLabel {
+    color: var(--text-secondary);
+  }
+  
+  .biometricConfirmation {
+    margin-top: var(--padding-md);
+  }
+  
+  .confirmCheck {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .confirmCheck input {
+    margin-top: 3px;
+  }
+  
+  /* Processing State */
+  .processingState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-md);
+  }
+  
+  .loadingIndicator {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: var(--padding-md);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .processingTitle {
+    margin-top: 0;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .processingText {
+    text-align: center;
+    color: var(--text-secondary);
+  }
+  
+  .scanLines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 0, 0, 0.05) 51%
+    );
+    background-size: 100% 4px;
+    z-index: 10;
+  }
+  
+  /* Error State */
+  .errorState {
+    text-align: center;
+    padding: var(--padding-md);
+  }
+  
+  .errorIcon {
+    font-size: 2rem;
+    color: rgb(255, 50, 50);
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .errorTitle {
+    margin-top: 0;
+    margin-bottom: var(--padding-sm);
+    color: rgb(255, 50, 50);
+  }
+  
+  .errorMessage {
+    color: rgb(255, 100, 100);
+    font-family: monospace;
+  }
+  
+  /* Success State */
+  .successContent {
+    text-align: center;
+    padding: var(--padding-md);
+  }
+  
+  .successIcon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 255, 100, 0.2);
+    color: rgb(0, 255, 100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto var(--padding-md);
+  }
+  
+  .successTitle {
+    margin-top: 0;
+    margin-bottom: var(--padding-sm);
+    color: rgb(0, 255, 100);
+  }
+  
+  .successMessage {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .deliveryInfo {
+    background-color: rgba(26, 27, 38, 0.5);
+    padding: var(--padding-md);
+    border-radius: 8px;
+    margin-bottom: var(--padding-md);
+    text-align: left;
+  }
+  
+  .deliveryInfo h4 {
+    margin-top: 0;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .transactionId {
+    font-family: monospace;
+    color: var(--primary);
+  }
+  
+  .modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--padding-sm);
+    margin-top: var(--padding-sm);
+  }
+  
+  /* Glitch Effects */
+  .glitchTarget {
+    position: relative;
+  }
+  
+  .activeGlitch {
+    animation: glitch 0.3s infinite;
+  }
+  
+  @keyframes glitch {
+    0%, 100% {
+      transform: translate(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translate(-3px, 2px);
+      opacity: 0.9;
+    }
+    40% {
+      transform: translate(3px, -2px);
+      opacity: 0.8;
+    }
+    60% {
+      transform: translate(-2px, -2px);
+      opacity: 0.9;
+    }
+    80% {
+      transform: translate(2px, 1px);
+      opacity: 0.8;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .listingsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .categoryTabs {
+      overflow-x: auto;
+      padding-bottom: var(--padding-sm);
+    }
+    
+    .categoryTab {
+      white-space: nowrap;
+    }
+    
+    .marketHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--padding-sm);
+    }
+    
+    .securityBadge {
+      align-self: flex-end;
+    }
+  }
+  
+  

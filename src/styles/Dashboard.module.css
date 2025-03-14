@@ -1,0 +1,172 @@
+.title {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: var(--padding-md);
+  }
+  
+  .userWarning {
+    margin-bottom: var(--padding-lg);
+  }
+  
+  .debtWarning {
+    background-color: rgba(255, 32, 64, 0.15);
+    border: 1px solid var(--error);
+    color: var(--error);
+    padding: var(--padding-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--padding-lg);
+  }
+  
+  .leftPanel, .rightPanel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+  }
+  
+  .sectionTitle {
+    font-size: 20px;
+    margin-bottom: var(--padding-md);
+    color: var(--text);
+    border-bottom: 1px solid rgba(122, 0, 255, 0.2);
+    padding-bottom: 8px;
+  }
+  
+  /* Balance Card Styles */
+  .balanceCard {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .balanceItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--padding-sm);
+    padding: 8px;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+  }
+  
+  .balanceItem:hover {
+    background-color: rgba(122, 0, 255, 0.1);
+  }
+  
+  .currencyName {
+    font-weight: 500;
+  }
+  
+  .balanceAmount {
+    font-weight: 700;
+  }
+  
+  .balanceActions {
+    display: flex;
+    gap: var(--padding-md);
+    margin-top: var(--padding-md);
+  }
+  
+  /* AI Card Styles */
+  .aiCard {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .aiMessage {
+    background-color: rgba(18, 16, 32, 0.6);
+    padding: var(--padding-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--padding-md);
+    font-style: italic;
+  }
+  
+  /* Transaction Card Styles */
+  .transactionsCard {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .transactionItem {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding-sm) 0;
+    border-bottom: 1px solid rgba(122, 0, 255, 0.1);
+  }
+  
+  .transactionDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .transactionType {
+    font-weight: 500;
+    color: var(--primary);
+  }
+  
+  .transactionReceiver, .transactionDate {
+    font-size: 14px;
+    color: rgba(224, 224, 255, 0.7);
+  }
+  
+  .transactionAmount {
+    font-weight: 700;
+  }
+  
+  .viewAllButton {
+    margin-top: var(--padding-md);
+  }
+  
+  /* Debt Card Styles */
+  .debtCard {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .debtDetails {
+    margin-bottom: var(--padding-md);
+  }
+  
+  .debtInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--padding-sm);
+  }
+  
+  .debtLabel {
+    font-weight: 500;
+  }
+  
+  .debtStatus {
+    font-weight: 700;
+  }
+  
+  .active {
+    color: #FFC107; /* Amber warning color */
+  }
+  
+  .overdue {
+    color: var(--error);
+  }
+  
+  .settled {
+    color: #4CAF50; /* Green success color */
+  }
+  
+  .debtAmount, .debtDate {
+    font-weight: 700;
+  }
+  
+  .collateralWarning {
+    font-size: 12px;
+    color: rgba(224, 224, 255, 0.5);
+    margin-bottom: var(--padding-md);
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard {
+      grid-template-columns: 1fr;
+    }
+  }
+  

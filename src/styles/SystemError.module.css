@@ -1,0 +1,176 @@
+.errorContainer {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .errorHeader {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .errorTitle {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: rgb(255, 60, 60);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  }
+  
+  .errorCode {
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .errorTerminal {
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(20, 20, 30, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 60, 60, 0.3);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  }
+  
+  .terminalHeader {
+    background-color: rgba(255, 0, 0, 0.2);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 60, 60, 0.3);
+  }
+  
+  .terminalTitle {
+    font-family: monospace;
+    font-weight: 600;
+  }
+  
+  .terminalStatus {
+    font-family: monospace;
+    color: rgb(255, 60, 60);
+    font-weight: 600;
+    animation: blink 1.5s infinite;
+  }
+  
+  .terminalContent {
+    padding: 1rem;
+    font-family: monospace;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .terminalLine {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .timestamp {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .errorLevel {
+    font-weight: 600;
+  }
+  
+  .errorLevelCritical {
+    color: rgb(255, 60, 60);
+  }
+  
+  .errorLevelError {
+    color: rgb(255, 100, 100);
+  }
+  
+  .errorLevelWarning {
+    color: rgb(255, 180, 60);
+  }
+  
+  .errorLevelAlert {
+    color: rgb(255, 150, 0);
+  }
+  
+  .errorLevelSystem {
+    color: rgb(100, 180, 255);
+  }
+  
+  .errorLevelHidden {
+    color: rgb(180, 120, 255);
+  }
+  
+  .hiddenMessage {
+    color: rgba(255, 255, 255, 0.7);
+    border-left: 3px solid rgb(180, 120, 255);
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .errorMessage {
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .errorMessage p {
+    margin-bottom: 0.75rem;
+  }
+  
+  .countdown {
+    font-family: monospace;
+    font-weight: 600;
+    color: rgb(255, 100, 100);
+  }
+  
+  .errorActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .securityNotice {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .smallText {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Animations */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .errorTitle {
+      font-size: 2.5rem;
+    }
+    
+    .errorActions {
+      flex-direction: column;
+    }
+    
+    .terminalLine {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+  }
+  

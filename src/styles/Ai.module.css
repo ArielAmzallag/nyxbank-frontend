@@ -1,0 +1,222 @@
+.title {
+    font-size: 32px;
+    margin-bottom: var(--padding-md);
+    text-align: center;
+    margin-top: var(--padding-lg);
+  }
+  
+  .chatCard {
+    max-width: 800px;
+    margin: 0 auto var(--padding-lg);
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+  
+  .chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-md);
+    background-color: rgba(26, 27, 38, 0.9);
+    border-bottom: 1px solid rgba(106, 0, 255, 0.3);
+  }
+  
+  .aiStatus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .statusDot {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 255, 100);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 255, 100, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(0, 255, 100, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 255, 100, 0);
+    }
+  }
+  
+  .aiVersion {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+  
+  .messagesContainer {
+    flex: 1;
+    padding: var(--padding-md);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-sm);
+    background-color: rgba(26, 27, 38, 0.5);
+  }
+  
+  .message {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 75%;
+    padding: var(--padding-sm);
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .userMessage {
+    align-self: flex-end;
+    background-color: rgba(106, 0, 255, 0.3);
+    border: 1px solid rgba(106, 0, 255, 0.5);
+  }
+  
+  .aiMessage {
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glitchedMessage {
+    background-color: rgba(255, 0, 77, 0.2);
+    border: 1px dashed rgba(255, 0, 77, 0.5);
+    animation: glitch 1s infinite;
+  }
+  
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  .messageContent {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .messageTime {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    align-self: flex-end;
+  }
+  
+  .typingIndicator {
+    display: flex;
+    gap: 4px;
+    padding: 10px;
+  }
+  
+  .typingIndicator span {
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-secondary);
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1.5s infinite;
+  }
+  
+  .typingIndicator span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .typingIndicator span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .inputArea {
+    display: flex;
+    gap: var(--padding-sm);
+    padding: var(--padding-md);
+    background-color: rgba(26, 27, 38, 0.9);
+    border-top: 1px solid rgba(106, 0, 255, 0.3);
+  }
+  
+  .aiDisclaimer {
+    padding: var(--padding-sm);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .smallText {
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+  
+  .aiFeatures {
+    max-width: 800px;
+    margin: 0 auto var(--padding-xl);
+  }
+  
+  .featuresTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: var(--padding-md);
+  }
+  
+  .featuresList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--padding-md);
+  }
+  
+  .featureItem {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-sm);
+    padding: var(--padding-sm);
+    background-color: rgba(26, 27, 38, 0.5);
+    border-radius: 8px;
+    border: 1px solid rgba(106, 0, 255, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .featureItem:hover {
+    transform: translateY(-3px);
+    background-color: rgba(106, 0, 255, 0.1);
+  }
+  
+  .featureIcon {
+    font-size: 1.5rem;
+  }
+  
+  .featureText {
+    font-size: 0.9rem;
+  }
+  

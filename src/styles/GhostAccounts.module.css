@@ -1,0 +1,893 @@
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .securityBadge {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: rgb(255, 80, 80);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: monospace;
+  }
+  
+  .warningBanner {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+  
+  .warningContent {
+    padding: 0.75rem;
+    text-align: center;
+    color: rgb(255, 100, 100);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .pageContainer {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .ghostsPanel {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .detailsPanel {
+    flex: 1;
+  }
+  
+  /* Filters Card */
+  .filtersCard {
+    padding: 0.75rem;
+  }
+  
+  .filtersContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .filtersTabs {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .filterTab {
+    background: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+  }
+  
+  .filterTab:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .activeFilter {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgb(106, 0, 255);
+  }
+  
+  /* Ghosts Card */
+  .ghostsCard {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ghostsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionTitle {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .recordCount {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .ghostsList {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: 0.5rem;
+  }
+  
+  .noRecords {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .ghostItem {
+    background-color: rgba(30, 30, 40, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .ghostItem:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(40, 40, 50, 0.5);
+  }
+  
+  .selectedGhost {
+    border-color: rgba(106, 0, 255, 0.5);
+    background-color: rgba(106, 0, 255, 0.1);
+  }
+  
+  .ghostHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ghostId {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .riskLevel {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  
+  .riskMinimal {
+    background-color: rgba(0, 200, 0, 0.2);
+    color: rgb(100, 255, 100);
+  }
+  
+  .riskLow {
+    background-color: rgba(200, 200, 0, 0.2);
+    color: rgb(200, 200, 0);
+  }
+  
+  .riskModerate {
+    background-color: rgba(255, 150, 0, 0.2);
+    color: rgb(255, 150, 0);
+  }
+  
+  .riskHigh {
+    background-color: rgba(255, 60, 0, 0.2);
+    color: rgb(255, 100, 60);
+  }
+  
+  .riskCritical {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: rgb(255, 60, 60);
+  }
+  
+  .ghostName {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+  
+  .erasedUsername {
+    text-decoration: line-through;
+    position: relative;
+  }
+  
+  .erasedUsername::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background-color: rgba(255, 0, 255, 0.5);
+  }
+  
+  .ghostDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .detailLabel {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .detailValue {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .erasureLevel {
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+  }
+  
+  .levelOne {
+    background-color: rgba(0, 100, 255, 0.2);
+    color: rgb(100, 160, 255);
+  }
+  
+  .levelTwo {
+    background-color: rgba(255, 150, 0, 0.2);
+    color: rgb(255, 150, 0);
+  }
+  
+  .levelThree {
+    background-color: rgba(255, 60, 0, 0.2);
+    color: rgb(255, 100, 60);
+  }
+  
+  .levelFour {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: rgb(255, 60, 60);
+  }
+  
+  .ghostFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  
+  .lastActivity {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .anomalyTypes {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .anomalyType {
+    background-color: rgba(106, 0, 255, 0.2);
+    color: rgb(180, 120, 255);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+  }
+  
+  .moreAnomalies {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Details Card */
+  .detailsCard {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .detailsHeader {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .detailsTitle {
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .ghostIdBadge {
+    background-color: rgba(106, 0, 255, 0.2);
+    color: rgb(180, 120, 255);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: monospace;
+  }
+  
+  .formerUsername {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    position: relative;
+  }
+  
+  .formerUsername::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background-color: rgba(255, 0, 255, 0.5);
+  }
+  
+  .detailBadges {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .erasureBadge, .riskBadge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .detailsTabs {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 -1.25rem;
+    padding: 0 1.25rem;
+  }
+  
+  .detailTab {
+    background: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  
+  .detailTab:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .activeTab {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgb(106, 0, 255);
+  }
+  
+  .detailsContent {
+    flex: 1;
+    padding: 1.25rem;
+    overflow-y: auto;
+  }
+  
+  /* Overview Tab */
+  .overviewContent, .activityContent, .connectionsContent, .containmentContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .detailSection {
+    background-color: rgba(30, 30, 40, 0.3);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  
+  .detailGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .reasonBox {
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 0.75rem;
+  }
+  
+  .reasonLabel {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .reasonValue {
+    font-size: 0.95rem;
+  }
+  
+  .bioStatus {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .bioItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .bioLabel {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+  }
+  
+  .bioValue {
+    font-size: 1rem;
+    color: rgb(255, 60, 255);
+    font-weight: 500;
+  }
+  
+  .fragmentsContainer {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .memoryFragment {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .fragmentHeader {
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .fragmentId {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .fragmentStatus {
+    font-size: 0.75rem;
+    color: rgb(0, 200, 100);
+  }
+  
+  .fragmentContent {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Activity Tab */
+  .anomalyList {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .anomalyItem {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .anomalyIcon {
+    font-size: 1.5rem;
+    color: rgb(255, 150, 0);
+  }
+  
+  .anomalyInfo {
+    flex: 1;
+  }
+  
+  .anomalyName {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .anomalyDescription {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .timelineContainer {
+    margin-top: 1rem;
+  }
+  
+  .timelineHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .timelineItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .viewAllTimeline {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  
+  /* Connections Tab */
+  .linkedAccountsList {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .linkedAccount {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 1rem;
+  }
+  
+  .accountHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .accountUsername {
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  .accountId {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .accountDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .accountDetail {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .accountActions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .connectionMap {
+    margin-top: 1rem;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+  }
+  
+  .mapPlaceholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+  }
+  
+  /* Containment Tab */
+  .containmentStatus {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .statusItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .statusActive {
+    color: rgb(0, 200, 100);
+    font-weight: 500;
+  }
+  
+  .statusInactive {
+    color: rgb(200, 60, 60);
+    font-weight: 500;
+  }
+  
+  .dangerZone {
+    border: 1px dashed rgba(255, 0, 0, 0.3);
+    background-color: rgba(255, 0, 0, 0.05);
+  }
+  
+  .dangerTitle {
+    color: rgb(255, 80, 80);
+    margin-top: 0;
+  }
+  
+  .dangerActions {
+    margin-top: 1rem;
+  }
+  
+  .dangerAction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 1rem;
+  }
+  
+  .actionInfo {
+    flex: 1;
+  }
+  
+  .actionTitle {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .actionDescription {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .dangerWarning {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: rgb(255, 100, 100);
+    text-align: center;
+  }
+  
+  /* Erasure Modal */
+  .erasureModal {
+    padding: 1.5rem;
+  }
+  
+  .erasureTitle {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: rgb(255, 60, 60);
+  }
+  
+  .erasureWarning {
+    margin-bottom: 1.5rem;
+  }
+  
+  .erasureWarning p {
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    color: rgb(255, 100, 100);
+    font-weight: 500;
+  }
+  
+  .dangerText {
+    font-weight: 500;
+    color: rgb(255, 80, 80);
+  }
+  
+  .confirmationBox {
+    margin-bottom: 1.5rem;
+  }
+  
+  .confirmLabel {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  
+  .confirmCode {
+    font-family: monospace;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    color: rgb(255, 100, 100);
+  }
+  
+  .confirmError {
+    margin-top: 0.5rem;
+    color: rgb(255, 80, 80);
+    font-size: 0.9rem;
+  }
+  
+  .modalActions {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .processing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .processingDot {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  .processingDot:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .processingDot:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  /* Erasure Complete */
+  .erasureComplete {
+    text-align: center;
+  }
+  
+  .erasureIcon {
+    font-size: 3rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: rgb(0, 200, 100);
+  }
+  
+  .erasureCompleteTitle {
+    margin-bottom: 1rem;
+    color: rgb(0, 200, 100);
+  }
+  
+  .erasureCompleteText {
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* No Selection State */
+  .noSelectionCard {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .noSelectionContent {
+    text-align: center;
+    padding: 2rem;
+    max-width: 400px;
+  }
+  
+  .noSelectionIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+  
+  .noSelectionTitle {
+    margin-bottom: 1rem;
+  }
+  
+  .noSelectionText {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Glitch Effects */
+  .glitchTarget {
+    position: relative;
+  }
+  
+  .activeGlitch {
+    animation: textGlitch 0.3s ease forwards;
+  }
+  
+  @keyframes textGlitch {
+    0% {
+      transform: translate(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translate(-3px, 2px);
+      opacity: 0.8;
+    }
+    40% {
+      transform: translate(3px, -2px);
+      color: rgb(255, 0, 255);
+      opacity: 0.6;
+    }
+    60% {
+      transform: translate(-3px, -2px);
+      opacity: 0.8;
+    }
+    80% {
+      transform: translate(3px, 2px);
+      color: rgb(0, 255, 255);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1200px) {
+    .pageContainer {
+      flex-direction: column;
+    }
+    
+    .ghostsPanel {
+      width: 100%;
+    }
+    
+    .detailsPanel {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .detailGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .timelineHeader, .timelineItem {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .timelineSystem {
+      display: none;
+    }
+  }
+  
+  
+  
